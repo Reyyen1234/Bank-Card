@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;500;600;700&family=Playfair+Display:ital@1&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+    background: #363b3b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    perspective: 1000px;
+    /* Give a 3D-positioned element 
+       قم بإعطاء عنصر ثلاثي الأبعاد*/
+}
+
+.container {
+    position: relative;
+    height: 225px;
+    width: 375px;
+    z-index: 100;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+
+.container:hover {
+    transform: rotateY(180deg);
+}
+
+.container .card {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* background-color: rgb(210, 210, 250); */
+    /*  box-shadow: 0 25px 45px rgba(255, 255, 255, 0.25); */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    background: repeating-linear-gradient(rgb(204, 204, 241), rgb(213, 250, 213), rgb(204, 204, 241));
+    backface-visibility: hidden;
+}
+
+.front-face header {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.card .logo img {
+    width: 85px;
+    margin-right: 10px;
+    border-radius: 25px 0px 25px 0px;
+    position: relative;
+}
+
+.card .card-details {
+    color: black;
+    display: flex;
+    margin-top: 10px;
+    margin-left: 15px;
+    align-items: flex-end;
+    justify-content: space-between;
+
+}
+
+.logo2 img {
+    width: 100px;
+}
+
+.logo3 img {
+    width: 45px;
+    position: absolute;
+
+}
+
+.logo3 i {
+    margin: 10px 10px;
+    color: rgb(223, 225, 226);
+}
+
+h5 {
+    font-size: 10px;
+    font-weight: 200;
+}
+
+h6 {
+    font-size: 10px;
+    font-weight: 200;
+}
+
+/* h5.number {
+
+    margin-top: 7px;
+} */
+
+h5.name {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.card-details .profile img {
+    width: 60px;
+    margin-right: 20px;
+}
+
+.card.back-face {
+    color: black;
+    border: none;
+    padding: 15px 25px 25px 25px;
+    transform: rotateY(180deg);
+    background: rgb(207, 211, 211);
+
+}
+
+.card.back-face h6 {
+    font-size: 8px;
+}
+
+.card.back-face .magnetic-strip {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    height: 30px;
+    width: 100%;
+    background: #bdbcbc;
+}
+
+.card.back-face .signature {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 5px;
+    height: 27px;
+    width: 40%;
+    background: repeating-linear-gradient(#fff, #fff 3px, #efefef 0px, #efefef 9px);
+    /* A gradient repeating #fff color, ,starting #fff after 3px, turning #efefef, and back to #efefef
+       تدرج لوني متكرر #fff ، يبدأ #fff بعد 3 بكسل ، ويتحول #efefef ، والعودة إلى #efefef */
+}
+
+.signature i {
+    color: #000;
+    font-size: 12px;
+    padding: 4px 6px;
+    background-color: #fff;
+    margin-right: -30px;
+    z-index: -1px;
+
+}
+
+/* .card.back-face h6 {
+    font-size: 10px;
+} */
+
+.card.back-face .cart-no {
+    font-size: 12px;
+    margin-top: 5px;
+
+}
+
+/* 
+.card.back-face h5 {
+    margin-left: 100px;
+
+} */
+.card.back-face .bank-info {
+    font-size: 8px;
+    align-items: center;
+    float: left;
+}
+
+.card.back-face .date {
+    font-size: 12px;
+
+}
+
+.card.back-face .valid {
+    margin-left: 100px;
+    font-size: 10px;
+}
+
+.card.back-face h4 {
+    font-size: 12px;
+}
+
+.card.back-face .bx-wifi {
+    font-size: 20px;
+}
+
+.card.back-face .logo {
+    float: right;
+}
